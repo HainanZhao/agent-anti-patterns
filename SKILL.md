@@ -1,4 +1,4 @@
-# Comprehensive Code Quality Testing Practice
+# Comprehensive Code Quality Best Practices
 
 ## Purpose
 
