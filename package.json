@@ -1,0 +1,17 @@
+{
+  "name": "agent-anti-patterns",
+  "version": "1.0.0",
+  "description": "Agent skill for detecting anti-patterns in code reviews",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests yet\""
+  },
+  "keywords": [
+    "code-review",
+    "anti-patterns",
+    "agent",
+    "lint"
+  ],
+  "author": "",
+  "license": "MIT"
+}
