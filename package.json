@@ -1,16 +1,16 @@
 {
-  "name": "agent-anti-patterns",
+  "name": "agent-comprehensive-quality-practice",
   "version": "1.0.0",
-  "description": "Agent skill for detecting anti-patterns in code reviews",
-  "main": "index.js",
+  "description": "Comprehensive code quality patterns for production systems",
+  "main": "SKILL.md",
   "scripts": {
-    "test": "echo \"No tests yet\""
+    "test": "echo \"No tests\""
   },
   "keywords": [
-    "code-review",
-    "anti-patterns",
-    "agent",
-    "lint"
+    "code-quality",
+    "enterprise",
+    "best-practices",
+    "agent"
   ],
   "author": "",
   "license": "MIT"
