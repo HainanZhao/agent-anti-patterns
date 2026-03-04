@@ -59,3 +59,39 @@ Use string-based types for maximum flexibility - parse when needed.
 ## Usage
 
 Apply these patterns naturally when writing any code. They represent best practices from enterprise software engineering.
+
+---
+
+## Installation
+
+```bash
+# Install as a global package
+npm install -g agent-comprehensive-quality-practice
+
+# Or use directly with npx
+npx agent-comprehensive-quality-practice
+
+# Or clone and use locally
+git clone https://github.com/HainanZhao/agent-anti-patterns.git
+cd agent-anti-patterns
+npm install
+```
+
+## Integration with Agents
+
+### Gemini CLI
+```bash
+gemini --include-directories ./agent-anti-patterns "Write a user service"
+```
+
+### Claude Code
+```bash
+claude --extra-path ./agent-anti-patterns "Write a user service"
+```
+
+### Direct Usage
+```bash
+# Use the skill file directly
+cat SKILL.md | pbcopy
+# Paste into your agent prompt
+```
