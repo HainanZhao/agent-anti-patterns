@@ -122,6 +122,90 @@ Duplicated logic that should be extracted.
 
 ---
 
+### 11. Random/Inconsistent Variable Names
+Using meaningless, random, or inconsistent variable names.
+
+**Signs:**
+- `let x, y, z` instead of descriptive names
+- `const d = new Date()` - what is `d`?
+- Mixing snake_case and camelCase inconsistently
+- Single letter names except in loops (i, j, k are OK)
+- Names that don't match domain terms
+- Variables that change type during function (array then object)
+- `temp`, `tmp`, `data`, `info` as names without meaning
+
+**Better:** Use descriptive names that convey intent. Match domain terminology. Use `createdAt` not `timestamp`, `userCount` not `num`.
+
+---
+
+### 12. Boolean Traps
+Using booleans as parameters that obscure meaning.
+
+**Signs:**
+- `process(true, false, true)` - what do those booleans mean?
+- `enableFeature(userId, true, false)` - what do the booleans do?
+- Using numbers as booleans (1/0 instead of true/false)
+
+**Better:** Use named parameters, enums, or config objects:
+```typescript
+// Bad
+createUser(name, true, false)
+
+// Good
+createUser(name, { isAdmin: false, sendEmail: true })
+```
+
+---
+
+### 13. Long Parameter Lists
+Functions/methods with too many parameters.
+
+**Signs:**
+- Function with 6+ parameters
+- Multiple optional parameters at the end
+- Same groups of parameters repeated across functions
+
+**Better:** Use config objects, builder pattern, or split into smaller functions.
+
+---
+
+### 14. Feature Envy
+A method accesses another class's data more than its own.
+
+**Signs:**
+- Class A method getting/setting many properties on class B
+- A function that works primarily with another object's data more than its own
+- Excessive delegation patterns
+
+**Better:** Move method to the class it envies. Consider if the method belongs elsewhere.
+
+---
+
+### 15. Speculative Generality
+Adding code "just in case" for future use.
+
+**Signs:**
+- Commented-out code left in production
+- Unused parameters in function signatures
+- Abstract classes with only one concrete subclass
+- Empty try-catch blocks
+
+**Better:** YAGNI - implement what you need now, not what you might need.
+
+---
+
+### 16. Primitive Obsession
+Using primitives where objects would be better.
+
+**Signs:**
+- `String dateString` instead of `Date` object
+- `Number status` instead of proper enum
+- Parsing strings constantly instead of typed objects
+
+**Better:** Use domain-specific types, enums, and value objects.
+
+---
+
 ## Review Prompt Template
 
 When reviewing code, use this structure:
